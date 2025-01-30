@@ -1,0 +1,67 @@
+name: '✅ Sub-task'
+description: '큰 작업을 작은 서브 태스크로 나누어 관리합니다.'
+title: '[Sub-task] '
+labels: ['sub-task']
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: "## 🎯 목표\n이 서브 태스크가 해결해야 하는 목표를 명확하게 작성해주세요."
+
+  - type: textarea
+    id: task_description
+    attributes:
+      label: '서브 태스크 설명'
+      description: '이 서브 태스크에서 수행할 작업을 구체적으로 적어주세요.'
+      placeholder: '예: 로그인 페이지의 UI를 구현해야 합니다.'
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## 🔗 관련 메인 이슈\n이 서브 태스크가 속한 메인 작업을 링크해주세요."
+
+  - type: input
+    id: parent_issue
+    attributes:
+      label: '메인 이슈 링크'
+      description: '이 서브 태스크가 포함된 주요 이슈의 링크를 입력해주세요.'
+      placeholder: '예: #123'
+
+  - type: markdown
+    attributes:
+      value: "## 🛠️ 작업 내용\n수행해야 할 작업을 체크리스트로 작성해주세요."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: '작업 리스트'
+      description: '해야 할 작업을 체크리스트로 작성하세요.'
+      options:
+        - label: '작업 1'
+        - label: '작업 2'
+        - label: '작업 3'
+
+  - type: markdown
+    attributes:
+      value: "## ⏳ 예상 소요 시간\n이 서브 태스크를 완료하는 데 예상되는 시간을 입력해주세요."
+
+  - type: input
+    id: estimated_time
+    attributes:
+      label: '예상 소요 시간'
+      description: '예상 시간을 입력하세요 (예: 2h, 1d, 3d)'
+      placeholder: '예: 3h'
+
+  - type: markdown
+    attributes:
+      value: "## 🚀 완료 기준\n이 서브 태스크가 완료되었음을 판단하는 기준을 설명해주세요."
+
+  - type: textarea
+    id: completion_criteria
+    attributes:
+      label: '완료 기준'
+      description: '이 작업이 완료되었음을 어떻게 확인할 수 있는지 적어주세요.'
+      placeholder: '예: PR이 병합되고 테스트가 통과하면 완료됩니다.'
+    validations:
+      required: true
