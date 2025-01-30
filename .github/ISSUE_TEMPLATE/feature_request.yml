@@ -1,0 +1,52 @@
+name: '🌟 Feature Request'
+description: '새로운 기능을 제안해주세요.'
+title: '[Feature] '
+labels: ['enhancement']
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: "## 🚀 기능 설명\n제안하는 기능에 대해 명확하고 간결하게 설명해주세요."
+
+  - type: textarea
+    id: feature_description
+    attributes:
+      label: '기능 설명'
+      description: '추가하고 싶은 기능을 자세히 설명해주세요.'
+      placeholder: '예: 사용자 프로필을 편집할 수 있는 기능 추가'
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## 🎯 필요성 및 기대 효과\n왜 이 기능이 필요한가요? 어떤 문제를 해결할 수 있나요?"
+
+  - type: textarea
+    id: necessity
+    attributes:
+      label: '필요성 및 기대 효과'
+      description: '이 기능이 어떤 개선 효과를 가져올 수 있는지 설명해주세요.'
+      placeholder: '예: 사용자 경험을 개선하고, 개인 맞춤 설정을 제공할 수 있음'
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## 📌 구현 방법 (선택 사항)\n어떤 방식으로 구현하면 좋을지 아이디어가 있다면 공유해주세요."
+
+  - type: textarea
+    id: implementation_idea
+    attributes:
+      label: '구현 아이디어'
+      description: '가능한 경우, 구현 방법에 대한 간략한 설명을 적어주세요.'
+      placeholder: '예: 설정 페이지에 프로필 수정 섹션 추가'
+
+  - type: markdown
+    attributes:
+      value: "## 📷 참고자료 (선택 사항)\n관련 문서나 참고할 만한 자료가 있다면 첨부해주세요."
+
+  - type: textarea
+    id: references
+    attributes:
+      label: '참고자료'
+      description: '관련 문서, 디자인 시안, 링크 등을 첨부해주세요.'
