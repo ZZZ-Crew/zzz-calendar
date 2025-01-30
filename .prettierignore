@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+*.log
+*.cache
+*.tmp
+*.swp
+.DS_Store
+.idea/
+.vscode/
+coverage/
+pnpm-lock.yaml
