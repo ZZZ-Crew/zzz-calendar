@@ -1,0 +1,63 @@
+name: '🐞 Bug Report'
+description: '버그를 제보하여 개선에 기여해주세요.'
+title: '[Bug] '
+labels: ['bug']
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: "## 🐛 버그 설명\n어떤 버그가 발생했는지 명확하고 간결하게 설명해주세요."
+
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: '버그 설명'
+      description: '발생한 버그에 대한 자세한 설명을 적어주세요.'
+      placeholder: '예: 버튼을 클릭했을 때 화면이 깜빡입니다.'
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## 🔁 재현 방법\n버그를 재현하는 단계를 작성해주세요."
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: '재현 방법'
+      description: '버그가 발생하는 과정을 단계별로 설명해주세요.'
+      placeholder: |
+        1. '...' 페이지로 이동
+        2. '...' 버튼 클릭
+        3. '...' 동작 확인
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## 🖥️ 실행 환경\n어떤 환경에서 버그가 발생했는지 설명해주세요."
+
+  - type: input
+    id: environment
+    attributes:
+      label: '실행 환경'
+      description: '사용 중인 OS 및 브라우저를 적어주세요.'
+      placeholder: '예: Windows 10 / Chrome 110'
+
+  - type: textarea
+    id: expected_vs_actual
+    attributes:
+      label: '🚑 예상 동작 vs. 실제 동작'
+      description: '원래 예상했던 동작과 실제 동작을 비교해서 설명해주세요.'
+      placeholder: |
+        예상 동작: 버튼을 클릭하면 팝업이 나타남
+        실제 동작: 버튼을 클릭하면 아무 반응이 없음
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: '📄 로그 (선택 사항)'
+      description: '관련 로그나 콘솔 에러 메시지가 있다면 첨부해주세요.'
+      render: shell
